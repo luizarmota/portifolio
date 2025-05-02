@@ -1,0 +1,282 @@
+/* Fundo preto com textura */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  background-image: url(http://www.transparenttextures.com/patterns/football-no-lines.png);
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Linha de scroll discreta no topo */
+.scroll-line {
+ position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, #7f5af0, #3d9acc);
+  z-index: 100;
+  width: 0%;
+  transition: width 0.2s ease-out;
+}
+
+
+/* Hero section com nome grande e animação */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.hero-name {
+  font-size: 4rem;
+  letter-spacing: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+font-family: Newsreader;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ccc;
+  font-family: Roboto Mono;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(30px); }
+}
+
+/* Assinatura estilo "vision" no fim da tela */
+.signature {
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 6px;
+  opacity: 0.2;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Container principal lado a lado */
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 40px 0;
+  gap: 80px;
+ font-family: Roboto Mono;
+}
+
+/* Wrapper da imagem */
+.about-photo-wrapper {
+  flex: 1;
+  position: relative;
+  padding-left:0px;
+}
+
+/* Imagem com efeito fixo (sticky) */
+.about-photo-sticky {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 100px;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+ 
+}
+
+/* Conteúdo de texto */
+.about-content {
+  flex: 2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #dddddd;
+  margin-top: 20px;
+}
+
+
+.about-photo {
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: fadeInPhoto 1.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Animações */
+@keyframes fadeInPhoto {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-photo-sticky {
+    position: relative;
+    top: 0;
+  }
+}
+/* Seção Projetos */
+.projects {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  text-align: center;
+font-family: Newsreader;
+}
+
+/* Grid dos cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* Card individual */
+.project-card {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(127, 90, 240, 0.5);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Botão GitHub */
+.project-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #7f5af0, #3d9acc);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.project-btn:hover {
+  background: linear-gradient(to right, #3d9acc, #7f5af0);
+}
+
+.contact {
+  text-align: center;
+  padding: 100px 20px;
+font-family: Newsreader;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+font-family: Roboto Mono;
+}
+
+.contact-links a {
+  color: #7f5af0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #3d9acc;
+}
+.footer {
+  background-color: #000;
+  color: #ccc;
+  padding: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #222;
+}
+#btn-topo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #7f5af0;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: none;
+  transition: background 0.3s ease;
+}
+
+#btn-topo:hover {
+  background-color: #3d9acc;
+}

@@ -1,7 +1,7 @@
 # 💻 Portfólio Pessoal – Luíza Mota
 
 Bem-vindos ao meu universo dev!  
-Este é o meu portfólio pessoal como Desenvolvedora Front-End Júnior — um espaço criado com propósito, estética e muito código feito com carinho ☕✨
+Este é o meu portfólio pessoal como Desenvolvedora Front-End Júnior em desenvolvimento ☕✨
 
 Explore meus projetos, conheça meu estilo e, se quiser bater um papo, os contatos estão no final 💌
 

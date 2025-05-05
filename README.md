@@ -49,8 +49,8 @@ Este site foi desenvolvido do zero com:
 
 ##  Acesse
 
-🔗 [Portfólio online (GitHub Pages)](https://luizarmota.github.io/portfolio)  
-📁 [Código-fonte completo no GitHub](https://github.com/luizarmota/portfolio)
+🔗 [Portfólio online (GitHub Pages)](https://luizarmota.github.io/portifolio/)  
+
 
 ---
 
